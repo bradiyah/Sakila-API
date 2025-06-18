@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sakila App - Login</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="icon" href="data:," />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h2 class="text-center text-primary mb-4">Sakila Database Login</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <!-- Formulario de conexión -->
+          <form id="dbForm">
+            <div class="mb-3">
+              <label for="host" class="form-label">Host</label>
+              <input
+                type="text"
+                class="form-control"
+                id="host"
+                placeholder="Ejemplo: localhost"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="port" class="form-label">Port</label>
+              <input
+                type="text"
+                class="form-control"
+                id="port"
+                placeholder="Ejemplo: 3306"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="database" class="form-label">Database</label>
+              <input
+                type="text"
+                class="form-control"
+                id="database"
+                placeholder="Nombre de la base de datos"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="user" class="form-label">User</label>
+              <input
+                type="text"
+                class="form-control"
+                id="user"
+                placeholder="Usuario"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                placeholder="Contraseña"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-primary w-100">
+              Conectar
+            </button>
+          </form>
+          <!-- Mensaje de error -->
+          <div
+            id="errorMessage"
+            class="mt-3 alert alert-danger"
+            style="display: none"
+          ></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Se carga el script de login con defer para asegurarse de que el DOM ya esté cargado -->
+    <script src="login.js" defer></script>
+    <!-- Si main.js es necesario para otras funcionalidades, asegúrate que no interfiera con el login -->
+    <script src="../dist/scripts/main.js"></script>
+  </body>
+</html>
