@@ -22,7 +22,7 @@ const pageSize = 10; // Número de resultados por página
 // Carga todas las películas de la base de datos.
 const loadFilms = () => __awaiter(void 0, void 0, void 0, function* () {
     try { //Realiza un fetch HTTP GET a /api/films
-        const response = yield fetch('http://localhost:3000/api/films');
+        const response = yield fetch('/api/films');
         filmsData = yield response.json(); // Guarda los resultados
         filteredFilms = [...filmsData];
         renderFilms(); // Lamada a la función para mostrar los resultados
@@ -35,7 +35,7 @@ const loadFilms = () => __awaiter(void 0, void 0, void 0, function* () {
 // Carga los actores top 5
 const loadAvailableFilms = () => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const response = yield fetch('http://localhost:3000/api/films/available');
+        const response = yield fetch('/api/films/available');
         filmsData = yield response.json();
         filteredFilms = [...filmsData];
         renderFilms();
